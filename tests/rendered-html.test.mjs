@@ -34,6 +34,9 @@ test("server-renders the completed tracker", async () => {
   assert.match(html, /FanDuel only/);
   assert.match(html, /Kalshi only/);
   assert.match(html, /Availability, not legal advice/);
+  assert.match(html, /Red abbreviation \+ dotted border/);
+  assert.match(html, /state-label is-contested/);
+  assert.match(html, /challenge-state-code/);
   assert.doesNotMatch(html, /<section class="hero"/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton/i);
 });

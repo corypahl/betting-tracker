@@ -66,6 +66,14 @@ function productLabel(available: boolean) {
 const mapWidth = 960;
 const mapHeight = 590;
 
+const compactLabelOffsets: Record<string, [number, number]> = {
+  CT: [18, 7],
+  MA: [23, -5],
+  MD: [20, 10],
+  NJ: [20, 6],
+  RI: [31, 3],
+};
+
 const topology = usTopology as unknown as {
   objects: { states: unknown };
 };
@@ -213,7 +221,7 @@ export function Tracker() {
             <div className="map-meta-row">
               <span>Showing {visibleCount} of {states.length}</span>
               <span className="contested-key">
-                <i aria-hidden="true" /> Active legal challenge
+                <i aria-hidden="true">AA</i> Red abbreviation + dotted border = active challenge
               </span>
             </div>
             <div className="map-scroll">
@@ -232,8 +240,14 @@ export function Tracker() {
                   const selected = displayedState.name === state.name;
                   const statePath = path(mapFeature as never) ?? "";
                   const labelPoint = path.centroid(mapFeature as never);
+                  const compactOffset = state.kalshiContested
+                    ? compactLabelOffsets[state.abbr]
+                    : undefined;
+                  const labelX = labelPoint[0] + (compactOffset?.[0] ?? 0);
+                  const labelY = labelPoint[1] + (compactOffset?.[1] ?? 0);
                   const showLabel = Number.isFinite(labelPoint[0]) &&
-                    !["CT", "DC", "DE", "MA", "MD", "NH", "NJ", "RI", "VT"].includes(state.abbr);
+                    (state.kalshiContested ||
+                      !["CT", "DC", "DE", "MA", "MD", "NH", "NJ", "RI", "VT"].includes(state.abbr));
                   return (
                     <g key={state.fips}>
                       <path
@@ -260,14 +274,29 @@ export function Tracker() {
                         <title>{state.name + " — " + categoryInfo[category].label}</title>
                       </path>
                       {showLabel && active ? (
-                        <text
-                          className="state-label"
-                          x={labelPoint[0]}
-                          y={labelPoint[1]}
-                          aria-hidden="true"
-                        >
-                          {state.abbr}
-                        </text>
+                        <>
+                          {compactOffset ? (
+                            <line
+                              className="state-label-leader is-contested"
+                              x1={labelPoint[0]}
+                              y1={labelPoint[1]}
+                              x2={labelX - 5}
+                              y2={labelY - 3}
+                              aria-hidden="true"
+                            />
+                          ) : null}
+                          <text
+                            className={
+                              "state-label " +
+                              (state.kalshiContested ? "is-contested" : "")
+                            }
+                            x={labelX}
+                            y={labelY}
+                            aria-hidden="true"
+                          >
+                            {state.abbr}
+                          </text>
+                        </>
                       ) : null}
                     </g>
                   );
@@ -312,7 +341,7 @@ export function Tracker() {
 
             {displayedState.kalshiContested ? (
               <div className="challenge-note">
-                <span>LEGAL STATUS MOVING</span>
+                <span className="challenge-state-code">{displayedState.abbr}</span>
                 <p>
                   {"note" in displayedState
                     ? displayedState.note

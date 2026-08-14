@@ -304,10 +304,14 @@ a {
 }
 
 .contested-key i {
-  border: 2px dashed var(--ink);
-  border-radius: 50%;
-  height: 12px;
-  width: 12px;
+  border: 1px dashed #bf2f38;
+  color: #bf2f38;
+  font-size: 7px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 12px;
+  text-align: center;
+  width: 16px;
 }
 
 .map-scroll {
@@ -361,6 +365,23 @@ a {
   pointer-events: none;
   text-anchor: middle;
   transform: translateY(4px);
+}
+
+.state-label.is-contested {
+  fill: #c72f3a;
+  font-size: 12px;
+  paint-order: stroke;
+  stroke: var(--paper-strong);
+  stroke-linejoin: round;
+  stroke-width: 2.5px;
+}
+
+.state-label-leader {
+  pointer-events: none;
+  stroke: #c72f3a;
+  stroke-dasharray: 2 2;
+  stroke-width: 1px;
+  vector-effect: non-scaling-stroke;
 }
 
 .map-instruction {
@@ -468,11 +489,11 @@ a {
   padding: 16px;
 }
 
-.challenge-note span {
-  color: #6f5a16;
-  font-size: 9px;
+.challenge-state-code {
+  color: #c72f3a;
+  font-size: 18px;
   font-weight: 900;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.1em;
 }
 
 .challenge-note p,

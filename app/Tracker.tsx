@@ -141,47 +141,28 @@ export function Tracker() {
 
   return (
     <main>
-      <header className="site-header">
+      <header className="site-header" id="top">
         <a className="wordmark" href="#top" aria-label="Market Map home">
           <span className="wordmark-dot" />
           MARKET MAP
         </a>
+        <p className="header-context">
+          FanDuel Sportsbook <span>×</span> Kalshi Sports Contracts
+        </p>
         <div className="header-meta">
           <span className="live-dot" />
           Updated weekly
         </div>
       </header>
 
-      <section className="hero" id="top">
-        <div className="hero-copy">
-          <p className="eyebrow">U.S. MARKET ACCESS · 51 JURISDICTIONS</p>
-          <h1>Two markets.<br />One clear map.</h1>
-          <p className="hero-deck">
-            Compare where FanDuel Sportsbook and Kalshi sports event contracts
-            are currently available—state by state.
-          </p>
-        </div>
-        <div className="hero-facts" aria-label="At a glance">
-          <div>
-            <strong>{states.filter((state) => state.fanduel).length}</strong>
-            <span>FanDuel jurisdictions</span>
-          </div>
-          <div>
-            <strong>{states.filter((state) => state.kalshi).length}</strong>
-            <span>Kalshi sports live</span>
-          </div>
-          <div>
-            <strong>{states.filter((state) => !state.kalshi).length}</strong>
-            <span>Kalshi court blocks</span>
-          </div>
-        </div>
-      </section>
-
       <section className="tracker-shell" aria-labelledby="map-heading">
         <div className="tracker-toolbar">
           <div>
-            <p className="section-kicker">FILTER THE MAP</p>
+            <p className="section-kicker">U.S. MARKET ACCESS · 51 JURISDICTIONS</p>
             <h2 id="map-heading">What’s live where?</h2>
+            <p className="tracker-intro">
+              Filter and compare current FanDuel and Kalshi sports availability.
+            </p>
           </div>
           <div className="toolbar-actions">
             <label className="state-picker">

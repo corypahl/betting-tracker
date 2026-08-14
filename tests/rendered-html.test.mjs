@@ -29,9 +29,11 @@ test("server-renders the completed tracker", async () => {
 
   const html = await response.text();
   assert.match(html, /<title>Market Map — FanDuel vs\. Kalshi<\/title>/i);
-  assert.match(html, /Two markets/);
+  assert.match(html, /What’s live where/);
+  assert.match(html, /U\.S\. MARKET ACCESS/);
   assert.match(html, /FanDuel only/);
   assert.match(html, /Kalshi only/);
   assert.match(html, /Availability, not legal advice/);
+  assert.doesNotMatch(html, /<section class="hero"/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton/i);
 });

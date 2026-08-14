@@ -1,0 +1,397 @@
+"use client";
+
+import { useMemo, useState } from "react";
+import { geoAlbersUsa, geoPath } from "d3-geo";
+import { feature } from "topojson-client";
+import usTopology from "us-atlas/states-10m.json";
+import trackerData from "../data/statuses.json";
+
+type Category = "neither" | "fanduel-only" | "kalshi-only" | "both";
+type StateStatus = (typeof trackerData.states)[number];
+
+type MapFeature = {
+  id?: string | number;
+  properties?: { name?: string } | null;
+  type: string;
+};
+
+const categoryInfo: Record<
+  Category,
+  { label: string; short: string; color: string; symbol: string }
+> = {
+  neither: {
+    label: "Neither available",
+    short: "Neither",
+    color: "#e84f4f",
+    symbol: "× ×",
+  },
+  "fanduel-only": {
+    label: "FanDuel only",
+    short: "FD only",
+    color: "#3c78e8",
+    symbol: "✓ ×",
+  },
+  "kalshi-only": {
+    label: "Kalshi only",
+    short: "Kalshi only",
+    color: "#f2c84b",
+    symbol: "× ✓",
+  },
+  both: {
+    label: "Both available",
+    short: "Both",
+    color: "#2eae69",
+    symbol: "✓ ✓",
+  },
+};
+
+const categoryOrder: Category[] = [
+  "neither",
+  "fanduel-only",
+  "kalshi-only",
+  "both",
+];
+
+function categoryFor(state: StateStatus): Category {
+  if (state.fanduel && state.kalshi) return "both";
+  if (state.fanduel) return "fanduel-only";
+  if (state.kalshi) return "kalshi-only";
+  return "neither";
+}
+
+function productLabel(available: boolean) {
+  return available ? "Available" : "Not available";
+}
+
+const mapWidth = 960;
+const mapHeight = 590;
+
+const topology = usTopology as unknown as {
+  objects: { states: unknown };
+};
+
+const stateCollection = feature(
+  usTopology as never,
+  topology.objects.states as never,
+) as unknown as { features: MapFeature[]; type: string };
+
+const projection = geoAlbersUsa().fitExtent(
+  [
+    [18, 18],
+    [mapWidth - 18, mapHeight - 18],
+  ],
+  stateCollection as never,
+);
+const path = geoPath(projection);
+
+function StatusMark({ available }: { available: boolean }) {
+  return (
+    <span
+      className={"status-mark " + (available ? "status-mark--yes" : "status-mark--no")}
+      aria-hidden="true"
+    >
+      {available ? "✓" : "×"}
+    </span>
+  );
+}
+
+export function Tracker() {
+  const states = trackerData.states;
+  const byFips = useMemo(
+    () => new Map(states.map((state) => [state.fips, state])),
+    [states],
+  );
+  const [activeCategories, setActiveCategories] = useState<Set<Category>>(
+    () => new Set(categoryOrder),
+  );
+  const [selectedName, setSelectedName] = useState("California");
+  const [hoveredName, setHoveredName] = useState<string | null>(null);
+
+  const counts = useMemo(() => {
+    const next = Object.fromEntries(
+      categoryOrder.map((category) => [category, 0]),
+    ) as Record<Category, number>;
+    states.forEach((state) => {
+      next[categoryFor(state)] += 1;
+    });
+    return next;
+  }, [states]);
+
+  const visibleCount = categoryOrder.reduce(
+    (sum, category) =>
+      sum + (activeCategories.has(category) ? counts[category] : 0),
+    0,
+  );
+
+  const displayedState =
+    states.find((state) => state.name === hoveredName) ??
+    states.find((state) => state.name === selectedName) ??
+    states[0];
+
+  const toggleCategory = (category: Category) => {
+    setActiveCategories((current) => {
+      const next = new Set(current);
+      if (next.has(category)) next.delete(category);
+      else next.add(category);
+      return next;
+    });
+  };
+
+  const showAll = () => setActiveCategories(new Set(categoryOrder));
+
+  return (
+    <main>
+      <header className="site-header">
+        <a className="wordmark" href="#top" aria-label="Market Map home">
+          <span className="wordmark-dot" />
+          MARKET MAP
+        </a>
+        <div className="header-meta">
+          <span className="live-dot" />
+          Updated weekly
+        </div>
+      </header>
+
+      <section className="hero" id="top">
+        <div className="hero-copy">
+          <p className="eyebrow">U.S. MARKET ACCESS · 51 JURISDICTIONS</p>
+          <h1>Two markets.<br />One clear map.</h1>
+          <p className="hero-deck">
+            Compare where FanDuel Sportsbook and Kalshi sports event contracts
+            are currently available—state by state.
+          </p>
+        </div>
+        <div className="hero-facts" aria-label="At a glance">
+          <div>
+            <strong>{states.filter((state) => state.fanduel).length}</strong>
+            <span>FanDuel jurisdictions</span>
+          </div>
+          <div>
+            <strong>{states.filter((state) => state.kalshi).length}</strong>
+            <span>Kalshi sports live</span>
+          </div>
+          <div>
+            <strong>{states.filter((state) => !state.kalshi).length}</strong>
+            <span>Kalshi court blocks</span>
+          </div>
+        </div>
+      </section>
+
+      <section className="tracker-shell" aria-labelledby="map-heading">
+        <div className="tracker-toolbar">
+          <div>
+            <p className="section-kicker">FILTER THE MAP</p>
+            <h2 id="map-heading">What’s live where?</h2>
+          </div>
+          <div className="toolbar-actions">
+            <label className="state-picker">
+              <span>Jump to a state</span>
+              <select
+                value={selectedName}
+                onChange={(event) => setSelectedName(event.target.value)}
+              >
+                {states.map((state) => (
+                  <option key={state.fips} value={state.name}>
+                    {state.name}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <button className="reset-button" type="button" onClick={showAll}>
+              Show all
+            </button>
+          </div>
+        </div>
+
+        <div className="filter-grid" aria-label="Availability filters">
+          {categoryOrder.map((category) => {
+            const info = categoryInfo[category];
+            const active = activeCategories.has(category);
+            return (
+              <button
+                type="button"
+                className={"filter-card " + (active ? "is-active" : "")}
+                aria-pressed={active}
+                onClick={() => toggleCategory(category)}
+                key={category}
+                style={{ "--category-color": info.color } as React.CSSProperties}
+              >
+                <span className="filter-swatch" aria-hidden="true" />
+                <span className="filter-copy">
+                  <strong>{info.label}</strong>
+                  <small>FanDuel · Kalshi&nbsp;&nbsp;{info.symbol}</small>
+                </span>
+                <span className="filter-count">{counts[category]}</span>
+              </button>
+            );
+          })}
+        </div>
+
+        <div className="map-layout">
+          <div className="map-card">
+            <div className="map-meta-row">
+              <span>Showing {visibleCount} of {states.length}</span>
+              <span className="contested-key">
+                <i aria-hidden="true" /> Active legal challenge
+              </span>
+            </div>
+            <div className="map-scroll">
+              <svg
+                className="us-map"
+                viewBox={"0 0 " + mapWidth + " " + mapHeight}
+                role="img"
+                aria-label="Interactive map of FanDuel and Kalshi availability by state"
+              >
+                {stateCollection.features.map((mapFeature) => {
+                  const fips = String(mapFeature.id ?? "").padStart(2, "0");
+                  const state = byFips.get(fips);
+                  if (!state) return null;
+                  const category = categoryFor(state);
+                  const active = activeCategories.has(category);
+                  const selected = displayedState.name === state.name;
+                  const statePath = path(mapFeature as never) ?? "";
+                  const labelPoint = path.centroid(mapFeature as never);
+                  const showLabel = Number.isFinite(labelPoint[0]) &&
+                    !["CT", "DC", "DE", "MA", "MD", "NH", "NJ", "RI", "VT"].includes(state.abbr);
+                  return (
+                    <g key={state.fips}>
+                      <path
+                        d={statePath}
+                        className={
+                          "state-shape " +
+                          (active ? "" : "is-filtered ") +
+                          (selected ? "is-selected " : "") +
+                          (state.kalshiContested ? "is-contested" : "")
+                        }
+                        fill={categoryInfo[category].color}
+                        tabIndex={active ? 0 : -1}
+                        role="button"
+                        aria-label={
+                          state.name + ": " + categoryInfo[category].label +
+                          (state.kalshiContested ? ", active legal challenge" : "")
+                        }
+                        onMouseEnter={() => setHoveredName(state.name)}
+                        onMouseLeave={() => setHoveredName(null)}
+                        onFocus={() => setHoveredName(state.name)}
+                        onBlur={() => setHoveredName(null)}
+                        onClick={() => setSelectedName(state.name)}
+                      >
+                        <title>{state.name + " — " + categoryInfo[category].label}</title>
+                      </path>
+                      {showLabel && active ? (
+                        <text
+                          className="state-label"
+                          x={labelPoint[0]}
+                          y={labelPoint[1]}
+                          aria-hidden="true"
+                        >
+                          {state.abbr}
+                        </text>
+                      ) : null}
+                    </g>
+                  );
+                })}
+              </svg>
+            </div>
+            <p className="map-instruction">Hover, focus, or select a state to inspect it.</p>
+          </div>
+
+          <aside className="state-detail" aria-live="polite">
+            <div className="detail-heading">
+              <span
+                className="detail-swatch"
+                style={{ backgroundColor: categoryInfo[categoryFor(displayedState)].color }}
+              />
+              <div>
+                <p>{displayedState.abbr}</p>
+                <h3>{displayedState.name}</h3>
+              </div>
+            </div>
+
+            <div className="product-status">
+              <div>
+                <span>FanDuel</span>
+                <strong>Sportsbook</strong>
+              </div>
+              <p className={displayedState.fanduel ? "is-available" : "is-unavailable"}>
+                <StatusMark available={displayedState.fanduel} />
+                {productLabel(displayedState.fanduel)}
+              </p>
+            </div>
+            <div className="product-status">
+              <div>
+                <span>Kalshi</span>
+                <strong>Sports contracts</strong>
+              </div>
+              <p className={displayedState.kalshi ? "is-available" : "is-unavailable"}>
+                <StatusMark available={displayedState.kalshi} />
+                {productLabel(displayedState.kalshi)}
+              </p>
+            </div>
+
+            {displayedState.kalshiContested ? (
+              <div className="challenge-note">
+                <span>LEGAL STATUS MOVING</span>
+                <p>
+                  {"note" in displayedState
+                    ? displayedState.note
+                    : "An active challenge could change access."}
+                </p>
+              </div>
+            ) : (
+              <div className="steady-note">
+                No active state challenge is noted in the current source set.
+              </div>
+            )}
+
+            <a
+              className="source-link"
+              href="https://www.gamblingsite.com/prediction-markets/legal-states/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Review the latest state notes <span aria-hidden="true">↗</span>
+            </a>
+          </aside>
+        </div>
+      </section>
+
+      <section className="methodology" id="methodology">
+        <div>
+          <p className="section-kicker">READ THE MAP CORRECTLY</p>
+          <h2>Availability, not legal advice.</h2>
+        </div>
+        <div className="methodology-copy">
+          <p>
+            “Available” means the product is reported as live for eligible users
+            in that jurisdiction. Kalshi is a federally designated contract market,
+            but states and courts disagree about sports event contracts. A dashed
+            outline flags an active challenge even when trading remains live.
+          </p>
+          <p>
+            FanDuel data comes from its official product-availability page. Kalshi
+            blocks are drawn from documented court orders in the state tracker.
+            Always confirm eligibility in the product before acting.
+          </p>
+          <div className="source-list">
+            {trackerData.sources.map((source, index) => (
+              <a href={source.url} target="_blank" rel="noreferrer" key={source.id}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                {source.label}
+                <b aria-hidden="true">↗</b>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <span>MARKET MAP</span>
+        <p>Data checked {trackerData.generatedAt} · For informational purposes only.</p>
+        <a href="https://www.ncpgambling.org/help-treatment/" target="_blank" rel="noreferrer">
+          Responsible play resources ↗
+        </a>
+      </footer>
+    </main>
+  );
+}

@@ -1,0 +1,451 @@
+{
+  "generatedAt": "2026-08-14",
+  "scope": "50 states and the District of Columbia",
+  "methodology": "Map colors compare current product availability: FanDuel Mobile Sportsbook availability from FanDuel's State of Play page and documented availability of Kalshi sports event contracts. Availability is not a legal opinion.",
+  "sources": [
+    {
+      "id": "fanduel",
+      "label": "FanDuel State of Play",
+      "url": "https://www.fanduel.com/about/state-of-play"
+    },
+    {
+      "id": "kalshi",
+      "label": "Prediction-market state tracker",
+      "url": "https://www.gamblingsite.com/prediction-markets/legal-states/"
+    },
+    {
+      "id": "cftc",
+      "label": "CFTC designation record",
+      "url": "https://www.cftc.gov/IndustryOversight/IndustryFilings/TradingOrganizations/42993"
+    }
+  ],
+  "states": [
+    {
+      "name": "Alabama",
+      "abbr": "AL",
+      "fips": "01",
+      "fanduel": false,
+      "kalshi": true,
+      "kalshiContested": false
+    },
+    {
+      "name": "Alaska",
+      "abbr": "AK",
+      "fips": "02",
+      "fanduel": false,
+      "kalshi": true,
+      "kalshiContested": false
+    },
+    {
+      "name": "Arizona",
+      "abbr": "AZ",
+      "fips": "04",
+      "fanduel": true,
+      "kalshi": true,
+      "kalshiContested": true,
+      "note": "State enforcement is contested; federal court protection currently preserves access."
+    },
+    {
+      "name": "Arkansas",
+      "abbr": "AR",
+      "fips": "05",
+      "fanduel": true,
+      "kalshi": true,
+      "kalshiContested": false
+    },
+    {
+      "name": "California",
+      "abbr": "CA",
+      "fips": "06",
+      "fanduel": false,
+      "kalshi": true,
+      "kalshiContested": true,
+      "note": "A tribal challenge is pending; sports contracts remain available."
+    },
+    {
+      "name": "Colorado",
+      "abbr": "CO",
+      "fips": "08",
+      "fanduel": true,
+      "kalshi": true,
+      "kalshiContested": false
+    },
+    {
+      "name": "Connecticut",
+      "abbr": "CT",
+      "fips": "09",
+      "fanduel": true,
+      "kalshi": true,
+      "kalshiContested": true,
+      "note": "State action is being litigated; access is currently preserved."
+    },
+    {
+      "name": "Delaware",
+      "abbr": "DE",
+      "fips": "10",
+      "fanduel": false,
+      "kalshi": true,
+      "kalshiContested": false
+    },
+    {
+      "name": "District of Columbia",
+      "abbr": "DC",
+      "fips": "11",
+      "fanduel": true,
+      "kalshi": true,
+      "kalshiContested": false
+    },
+    {
+      "name": "Florida",
+      "abbr": "FL",
+      "fips": "12",
+      "fanduel": false,
+      "kalshi": true,
+      "kalshiContested": false
+    },
+    {
+      "name": "Georgia",
+      "abbr": "GA",
+      "fips": "13",
+      "fanduel": false,
+      "kalshi": true,
+      "kalshiContested": false
+    },
+    {
+      "name": "Hawaii",
+      "abbr": "HI",
+      "fips": "15",
+      "fanduel": false,
+      "kalshi": true,
+      "kalshiContested": false
+    },
+    {
+      "name": "Idaho",
+      "abbr": "ID",
+      "fips": "16",
+      "fanduel": false,
+      "kalshi": true,
+      "kalshiContested": false
+    },
+    {
+      "name": "Illinois",
+      "abbr": "IL",
+      "fips": "17",
+      "fanduel": true,
+      "kalshi": true,
+      "kalshiContested": true,
+      "note": "A licensing law and federal challenge are pending; access remains live."
+    },
+    {
+      "name": "Indiana",
+      "abbr": "IN",
+      "fips": "18",
+      "fanduel": true,
+      "kalshi": true,
+      "kalshiContested": false
+    },
+    {
+      "name": "Iowa",
+      "abbr": "IA",
+      "fips": "19",
+      "fanduel": true,
+      "kalshi": true,
+      "kalshiContested": false
+    },
+    {
+      "name": "Kansas",
+      "abbr": "KS",
+      "fips": "20",
+      "fanduel": true,
+      "kalshi": true,
+      "kalshiContested": false
+    },
+    {
+      "name": "Kentucky",
+      "abbr": "KY",
+      "fips": "21",
+      "fanduel": true,
+      "kalshi": true,
+      "kalshiContested": false
+    },
+    {
+      "name": "Louisiana",
+      "abbr": "LA",
+      "fips": "22",
+      "fanduel": true,
+      "kalshi": true,
+      "kalshiContested": false
+    },
+    {
+      "name": "Maine",
+      "abbr": "ME",
+      "fips": "23",
+      "fanduel": false,
+      "kalshi": true,
+      "kalshiContested": false
+    },
+    {
+      "name": "Maryland",
+      "abbr": "MD",
+      "fips": "24",
+      "fanduel": true,
+      "kalshi": true,
+      "kalshiContested": true,
+      "note": "State enforcement litigation is ongoing; sports contracts remain available."
+    },
+    {
+      "name": "Massachusetts",
+      "abbr": "MA",
+      "fips": "25",
+      "fanduel": true,
+      "kalshi": false,
+      "kalshiContested": true,
+      "note": "The current source reports a court-ordered block on Kalshi sports contracts."
+    },
+    {
+      "name": "Michigan",
+      "abbr": "MI",
+      "fips": "26",
+      "fanduel": true,
+      "kalshi": false,
+      "kalshiContested": true,
+      "note": "The current source reports a court-ordered block on Kalshi sports contracts."
+    },
+    {
+      "name": "Minnesota",
+      "abbr": "MN",
+      "fips": "27",
+      "fanduel": false,
+      "kalshi": true,
+      "kalshiContested": true,
+      "note": "The state's prediction-market ban is enjoined while litigation continues."
+    },
+    {
+      "name": "Mississippi",
+      "abbr": "MS",
+      "fips": "28",
+      "fanduel": false,
+      "kalshi": true,
+      "kalshiContested": false
+    },
+    {
+      "name": "Missouri",
+      "abbr": "MO",
+      "fips": "29",
+      "fanduel": true,
+      "kalshi": true,
+      "kalshiContested": false
+    },
+    {
+      "name": "Montana",
+      "abbr": "MT",
+      "fips": "30",
+      "fanduel": false,
+      "kalshi": true,
+      "kalshiContested": false
+    },
+    {
+      "name": "Nebraska",
+      "abbr": "NE",
+      "fips": "31",
+      "fanduel": false,
+      "kalshi": true,
+      "kalshiContested": false
+    },
+    {
+      "name": "Nevada",
+      "abbr": "NV",
+      "fips": "32",
+      "fanduel": false,
+      "kalshi": false,
+      "kalshiContested": true,
+      "note": "The current source reports a court-ordered block on Kalshi sports contracts."
+    },
+    {
+      "name": "New Hampshire",
+      "abbr": "NH",
+      "fips": "33",
+      "fanduel": false,
+      "kalshi": true,
+      "kalshiContested": false
+    },
+    {
+      "name": "New Jersey",
+      "abbr": "NJ",
+      "fips": "34",
+      "fanduel": true,
+      "kalshi": true,
+      "kalshiContested": true,
+      "note": "A federal appeals ruling currently protects access while litigation continues."
+    },
+    {
+      "name": "New Mexico",
+      "abbr": "NM",
+      "fips": "35",
+      "fanduel": false,
+      "kalshi": true,
+      "kalshiContested": false
+    },
+    {
+      "name": "New York",
+      "abbr": "NY",
+      "fips": "36",
+      "fanduel": true,
+      "kalshi": true,
+      "kalshiContested": true,
+      "note": "State litigation is active; Kalshi sports contracts remain available."
+    },
+    {
+      "name": "North Carolina",
+      "abbr": "NC",
+      "fips": "37",
+      "fanduel": true,
+      "kalshi": true,
+      "kalshiContested": false
+    },
+    {
+      "name": "North Dakota",
+      "abbr": "ND",
+      "fips": "38",
+      "fanduel": false,
+      "kalshi": true,
+      "kalshiContested": false
+    },
+    {
+      "name": "Ohio",
+      "abbr": "OH",
+      "fips": "39",
+      "fanduel": true,
+      "kalshi": true,
+      "kalshiContested": true,
+      "note": "State enforcement is under active challenge; access remains live."
+    },
+    {
+      "name": "Oklahoma",
+      "abbr": "OK",
+      "fips": "40",
+      "fanduel": false,
+      "kalshi": true,
+      "kalshiContested": false
+    },
+    {
+      "name": "Oregon",
+      "abbr": "OR",
+      "fips": "41",
+      "fanduel": false,
+      "kalshi": true,
+      "kalshiContested": false
+    },
+    {
+      "name": "Pennsylvania",
+      "abbr": "PA",
+      "fips": "42",
+      "fanduel": true,
+      "kalshi": true,
+      "kalshiContested": true,
+      "note": "Prediction-market sports contracts are subject to an active state challenge."
+    },
+    {
+      "name": "Rhode Island",
+      "abbr": "RI",
+      "fips": "44",
+      "fanduel": false,
+      "kalshi": true,
+      "kalshiContested": true,
+      "note": "A state lawsuit is pending; sports contracts remain available."
+    },
+    {
+      "name": "South Carolina",
+      "abbr": "SC",
+      "fips": "45",
+      "fanduel": false,
+      "kalshi": true,
+      "kalshiContested": false
+    },
+    {
+      "name": "South Dakota",
+      "abbr": "SD",
+      "fips": "46",
+      "fanduel": false,
+      "kalshi": true,
+      "kalshiContested": false
+    },
+    {
+      "name": "Tennessee",
+      "abbr": "TN",
+      "fips": "47",
+      "fanduel": true,
+      "kalshi": true,
+      "kalshiContested": true,
+      "note": "A federal injunction currently blocks state enforcement."
+    },
+    {
+      "name": "Texas",
+      "abbr": "TX",
+      "fips": "48",
+      "fanduel": false,
+      "kalshi": true,
+      "kalshiContested": true,
+      "note": "State scrutiny is active; Kalshi sports contracts remain available."
+    },
+    {
+      "name": "Utah",
+      "abbr": "UT",
+      "fips": "49",
+      "fanduel": false,
+      "kalshi": true,
+      "kalshiContested": true,
+      "note": "State enforcement is permitted and access may change quickly; contracts remain available for now."
+    },
+    {
+      "name": "Vermont",
+      "abbr": "VT",
+      "fips": "50",
+      "fanduel": true,
+      "kalshi": true,
+      "kalshiContested": false
+    },
+    {
+      "name": "Virginia",
+      "abbr": "VA",
+      "fips": "51",
+      "fanduel": true,
+      "kalshi": true,
+      "kalshiContested": false
+    },
+    {
+      "name": "Washington",
+      "abbr": "WA",
+      "fips": "53",
+      "fanduel": false,
+      "kalshi": false,
+      "kalshiContested": true,
+      "note": "The current source reports a court-ordered block on Kalshi sports contracts."
+    },
+    {
+      "name": "West Virginia",
+      "abbr": "WV",
+      "fips": "54",
+      "fanduel": true,
+      "kalshi": true,
+      "kalshiContested": false
+    },
+    {
+      "name": "Wisconsin",
+      "abbr": "WI",
+      "fips": "55",
+      "fanduel": false,
+      "kalshi": true,
+      "kalshiContested": true,
+      "note": "State and tribal litigation is pending; access remains live."
+    },
+    {
+      "name": "Wyoming",
+      "abbr": "WY",
+      "fips": "56",
+      "fanduel": true,
+      "kalshi": true,
+      "kalshiContested": false
+    }
+  ]
+}

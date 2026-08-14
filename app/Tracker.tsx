@@ -1,12 +1,13 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { geoAlbersUsa, geoPath } from "d3-geo";
 import { feature } from "topojson-client";
 import usTopology from "us-atlas/states-10m.json";
 import trackerData from "../data/statuses.json";
 
 type Category = "neither" | "fanduel-only" | "kalshi-only" | "both";
+type Theme = "dark" | "light";
 type StateStatus = (typeof trackerData.states)[number];
 
 type MapFeature = {
@@ -51,6 +52,12 @@ const categoryOrder: Category[] = [
   "kalshi-only",
   "both",
 ];
+
+const mapZoomOptions = [
+  { label: "Fit", value: 1 },
+  { label: "1.5×", value: 1.5 },
+  { label: "2×", value: 2 },
+] as const;
 
 function categoryFor(state: StateStatus): Category {
   if (state.fanduel && state.kalshi) return "both";
@@ -114,6 +121,16 @@ export function Tracker() {
   );
   const [selectedName, setSelectedName] = useState("California");
   const [hoveredName, setHoveredName] = useState<string | null>(null);
+  const [theme, setTheme] = useState<Theme>("dark");
+  const [mapZoom, setMapZoom] = useState(1);
+
+  useEffect(() => {
+    const storedTheme = window.localStorage.getItem("market-map-theme");
+    const initialTheme: Theme = storedTheme === "light" ? "light" : "dark";
+    document.documentElement.dataset.theme = initialTheme;
+    const frame = window.requestAnimationFrame(() => setTheme(initialTheme));
+    return () => window.cancelAnimationFrame(frame);
+  }, []);
 
   const counts = useMemo(() => {
     const next = Object.fromEntries(
@@ -147,6 +164,15 @@ export function Tracker() {
 
   const showAll = () => setActiveCategories(new Set(categoryOrder));
 
+  const toggleTheme = () => {
+    setTheme((current) => {
+      const next = current === "dark" ? "light" : "dark";
+      document.documentElement.dataset.theme = next;
+      window.localStorage.setItem("market-map-theme", next);
+      return next;
+    });
+  };
+
   return (
     <main>
       <header className="site-header" id="top">
@@ -157,9 +183,20 @@ export function Tracker() {
         <p className="header-context">
           FanDuel Sportsbook <span>×</span> Kalshi Sports Contracts
         </p>
-        <div className="header-meta">
-          <span className="live-dot" />
-          Updated weekly
+        <div className="header-actions">
+          <div className="header-meta">
+            <span className="live-dot" />
+            Updated weekly
+          </div>
+          <button
+            className="theme-toggle"
+            type="button"
+            onClick={toggleTheme}
+            aria-label={"Switch to " + (theme === "dark" ? "light" : "dark") + " mode"}
+          >
+            <span aria-hidden="true">{theme === "dark" ? "☀" : "☾"}</span>
+            <b>{theme === "dark" ? "Light" : "Dark"}</b>
+          </button>
         </div>
       </header>
 
@@ -173,19 +210,6 @@ export function Tracker() {
             </p>
           </div>
           <div className="toolbar-actions">
-            <label className="state-picker">
-              <span>Jump to a state</span>
-              <select
-                value={selectedName}
-                onChange={(event) => setSelectedName(event.target.value)}
-              >
-                {states.map((state) => (
-                  <option key={state.fips} value={state.name}>
-                    {state.name}
-                  </option>
-                ))}
-              </select>
-            </label>
             <button className="reset-button" type="button" onClick={showAll}>
               Show all
             </button>
@@ -219,10 +243,25 @@ export function Tracker() {
         <div className="map-layout">
           <div className="map-card">
             <div className="map-meta-row">
-              <span>Showing {visibleCount} of {states.length}</span>
-              <span className="contested-key">
-                <i aria-hidden="true">AA</i> Red abbreviation + dotted border = active challenge
-              </span>
+              <div className="map-meta-copy">
+                <span>Showing {visibleCount} of {states.length}</span>
+                <span className="contested-key">
+                  <i aria-hidden="true">AA</i> Red abbreviation + dotted border = active challenge
+                </span>
+              </div>
+              <div className="map-size-control" role="group" aria-label="Map size">
+                {mapZoomOptions.map((option) => (
+                  <button
+                    type="button"
+                    className={"map-size-button " + (mapZoom === option.value ? "is-active" : "")}
+                    aria-pressed={mapZoom === option.value}
+                    onClick={() => setMapZoom(option.value)}
+                    key={option.value}
+                  >
+                    {option.label}
+                  </button>
+                ))}
+              </div>
             </div>
             <div className="map-scroll">
               <svg
@@ -230,6 +269,7 @@ export function Tracker() {
                 viewBox={"0 0 " + mapWidth + " " + mapHeight}
                 role="img"
                 aria-label="Interactive map of FanDuel and Kalshi availability by state"
+                style={{ "--map-width": `${mapZoom * 100}%` } as React.CSSProperties}
               >
                 {stateCollection.features.map((mapFeature) => {
                   const fips = String(mapFeature.id ?? "").padStart(2, "0");
@@ -303,7 +343,9 @@ export function Tracker() {
                 })}
               </svg>
             </div>
-            <p className="map-instruction">Hover, focus, or select a state to inspect it.</p>
+            <p className="map-instruction">
+              Fit shows the full map. Choose 1.5× or 2×, then swipe to inspect.
+            </p>
           </div>
 
           <aside className="state-detail" aria-live="polite">

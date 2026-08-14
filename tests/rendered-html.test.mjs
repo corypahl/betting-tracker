@@ -37,6 +37,10 @@ test("server-renders the completed tracker", async () => {
   assert.match(html, /Red abbreviation \+ dotted border/);
   assert.match(html, /state-label is-contested/);
   assert.match(html, /challenge-state-code/);
+  assert.match(html, /data-theme="dark"/);
+  assert.match(html, /aria-label="Map size"/);
+  assert.match(html, />1\.5×</);
+  assert.doesNotMatch(html, /Jump to a state/);
   assert.doesNotMatch(html, /<section class="hero"/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton/i);
 });

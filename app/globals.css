@@ -103,9 +103,9 @@ a {
 .wordmark-dot {
   background: conic-gradient(
     var(--grey) 0 25%,
-    var(--green) 25% 50%,
+    var(--blue) 25% 50%,
     var(--yellow) 50% 75%,
-    var(--red) 75% 100%
+    var(--green) 75% 100%
   );
   border: 2px solid var(--ink);
   border-radius: 50%;

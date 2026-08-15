@@ -29,13 +29,13 @@ const categoryInfo: Record<
   "fanduel-only": {
     label: "FanDuel only",
     short: "FD only",
-    color: "#2eae69",
+    color: "#3c78e8",
     symbol: "✓ ×",
   },
   "kalshi-only": {
     label: "Kalshi only",
     short: "Kalshi only",
-    color: "#e84f4f",
+    color: "#2eae69",
     symbol: "× ✓",
   },
   both: {

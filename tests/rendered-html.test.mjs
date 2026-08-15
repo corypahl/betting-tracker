@@ -33,6 +33,10 @@ test("server-renders the completed tracker", async () => {
   assert.match(html, /U\.S\. MARKET ACCESS/);
   assert.match(html, /FanDuel only/);
   assert.match(html, /Kalshi only/);
+  assert.match(html, /--category-color:#7d8791/);
+  assert.match(html, /--category-color:#2eae69/);
+  assert.match(html, /--category-color:#f2c84b/);
+  assert.match(html, /--category-color:#e84f4f/);
   assert.match(html, /Availability, not legal advice/);
   assert.match(html, /Red abbreviation \+ dotted border/);
   assert.match(html, /state-label is-contested/);

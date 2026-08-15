@@ -12,6 +12,7 @@
   --blue: #3c78e8;
   --yellow: #f2c84b;
   --green: #2eae69;
+  --grey: #7d8791;
   --panel-muted: rgba(255, 253, 248, 0.48);
   --map-border: #fffdf8;
   --map-filtered: #e3dfd5;
@@ -101,10 +102,10 @@ a {
 
 .wordmark-dot {
   background: conic-gradient(
-    var(--blue) 0 25%,
-    var(--red) 25% 50%,
-    var(--green) 50% 75%,
-    var(--yellow) 75% 100%
+    var(--grey) 0 25%,
+    var(--green) 25% 50%,
+    var(--yellow) 50% 75%,
+    var(--red) 75% 100%
   );
   border: 2px solid var(--ink);
   border-radius: 50%;

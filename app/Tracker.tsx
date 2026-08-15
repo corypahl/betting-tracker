@@ -23,25 +23,25 @@ const categoryInfo: Record<
   neither: {
     label: "Neither available",
     short: "Neither",
-    color: "#e84f4f",
+    color: "#7d8791",
     symbol: "× ×",
   },
   "fanduel-only": {
     label: "FanDuel only",
     short: "FD only",
-    color: "#3c78e8",
+    color: "#2eae69",
     symbol: "✓ ×",
   },
   "kalshi-only": {
     label: "Kalshi only",
     short: "Kalshi only",
-    color: "#f2c84b",
+    color: "#e84f4f",
     symbol: "× ✓",
   },
   both: {
     label: "Both available",
     short: "Both",
-    color: "#2eae69",
+    color: "#f2c84b",
     symbol: "✓ ✓",
   },
 };

@@ -30,6 +30,10 @@ test("server-renders the completed tracker", async () => {
   const html = await response.text();
   assert.match(html, /<title>Market Map — FanDuel vs\. Kalshi<\/title>/i);
   assert.match(html, /What’s live where/);
+  assert.match(html, /States challenging Kalshi/);
+  assert.match(html, /Daily legal news/);
+  assert.match(html, /Updated daily/);
+  assert.match(html, /All coverage/);
   assert.match(html, /U\.S\. MARKET ACCESS/);
   assert.match(html, /FanDuel only/);
   assert.match(html, /Kalshi only/);

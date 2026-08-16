@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { geoAlbersUsa, geoPath } from "d3-geo";
 import { feature } from "topojson-client";
 import usTopology from "us-atlas/states-10m.json";
+import newsData from "../data/news.json";
 import trackerData from "../data/statuses.json";
 
 type Category = "neither" | "fanduel-only" | "kalshi-only" | "both";
@@ -68,6 +69,14 @@ function categoryFor(state: StateStatus): Category {
 
 function productLabel(available: boolean) {
   return available ? "Available" : "Not available";
+}
+
+function formatNewsDate(value: string) {
+  return new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    day: "numeric",
+    timeZone: "UTC",
+  }).format(new Date(value));
 }
 
 const mapWidth = 960;
@@ -186,7 +195,7 @@ export function Tracker() {
         <div className="header-actions">
           <div className="header-meta">
             <span className="live-dot" />
-            Updated weekly
+            Updated daily
           </div>
           <button
             className="theme-toggle"
@@ -199,6 +208,45 @@ export function Tracker() {
           </button>
         </div>
       </header>
+
+      <section className="news-monitor" aria-labelledby="news-heading">
+        <div className="news-monitor-intro">
+          <div>
+            <p className="news-eyebrow">
+              <span aria-hidden="true" /> Daily legal news
+            </p>
+            <h2 id="news-heading">States challenging Kalshi</h2>
+            <p className="news-updated">
+              Headlines checked {newsData.generatedAt} · {newsData.source}
+            </p>
+          </div>
+          <a href={newsData.queryUrl} target="_blank" rel="noreferrer">
+            All coverage <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <div className="news-feed">
+          {newsData.items.slice(0, 4).map((item) => (
+            <a
+              className="news-item"
+              href={item.url}
+              target="_blank"
+              rel="noreferrer"
+              key={item.url}
+            >
+              <span className="news-state-tags">
+                {item.states.map((state) => (
+                  <b key={state.abbr}>{state.abbr}</b>
+                ))}
+              </span>
+              <strong>{item.title}</strong>
+              <small>
+                {item.source} · {formatNewsDate(item.publishedAt)}
+                <span aria-hidden="true"> ↗</span>
+              </small>
+            </a>
+          ))}
+        </div>
+      </section>
 
       <section className="tracker-shell" aria-labelledby="map-heading">
         <div className="tracker-toolbar">

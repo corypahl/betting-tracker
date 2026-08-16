@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://corypahl.github.io/betting-tracker/"),
   title: "Market Map — FanDuel vs. Kalshi",
   description:
-    "A weekly, state-by-state comparison of FanDuel Sportsbook and Kalshi sports-contract availability.",
+    "A daily state-by-state comparison and news monitor for FanDuel Sportsbook and Kalshi sports-contract availability.",
   icons: {
     icon: "/favicon.svg",
   },

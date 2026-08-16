@@ -17,9 +17,9 @@ page. Kalshi blocks come from a maintained [prediction-market state tracker](htt
 with the [CFTC designation record](https://www.cftc.gov/IndustryOversight/IndustryFilings/TradingOrganizations/42993)
 included for federal context.
 
-The scheduled GitHub Action runs every Monday. It refreshes `data/statuses.json`,
-validates all 51 jurisdictions, commits a dated update when needed, builds the
-static site, and deploys it to GitHub Pages.
+The scheduled GitHub Action runs daily. It refreshes `data/statuses.json` and a
+Google News headline feed in `data/news.json`, validates the data, commits a
+dated update when needed, builds the static site, and deploys it to GitHub Pages.
 
 ## Local development
 
@@ -41,7 +41,7 @@ Run the source refresh manually with `npm run update-data`.
 
 In the repository settings, set **Pages → Build and deployment → Source** to
 **GitHub Actions**. The workflow at `.github/workflows/deploy-pages.yml` handles
-both weekly refreshes and deployment.
+both daily refreshes and deployment.
 
 This project is informational only. Users should confirm eligibility in the
 relevant product before acting.

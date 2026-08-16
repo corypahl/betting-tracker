@@ -9,7 +9,7 @@ async function fetchText(url) {
   const response = await fetch(url, {
     headers: {
       "user-agent":
-        "market-map-weekly-updater/1.0 (+https://github.com/corypahl/betting-tracker)",
+        "market-map-daily-updater/1.0 (+https://github.com/corypahl/betting-tracker)",
     },
   });
 

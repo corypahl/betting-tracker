@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-15",
+  "generatedAt": "2026-08-17",
   "source": "Google News",
   "query": "Kalshi (state OR lawsuit OR court OR regulator) when:90d",
   "queryUrl": "https://news.google.com/search?q=Kalshi+%28state+OR+lawsuit+OR+court+OR+regulator%29+when%3A90d&hl=en-US&gl=US&ceid=US%3Aen",
@@ -57,11 +57,11 @@
       ]
     },
     {
-      "title": "Judge allows Utah to enforce antigambling laws on Kalshi",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQbEVPT2VzVXJvM3BjajlLbE5GemI2RzYzOVYxcUFsYlV3UGVNeEVkeHhuSmZEU29XMnlUWWhIb0dOVGJqb3lKYnFlU2lHZExDczlIdWhsLWE0TFBEN3hwYzFJbXp0bHBsdmdYSlpDSHZ5R2hCQ3I5UEEtdzF2cmtGeEpwZllNWVkyanFwZWs2Yk5XT0XSAZgBQVVfeXFMTk1POWNGd2dTQXhXeGdGN2owZ1RHZUx6RVE1Q1dFQkhqUjdEa3hQT0RaZHJ1Z01QLTZPQlAxRWpaWW11ZDlCV2dEeXRhbFFEX3JfN3Rrc1ltTGt5MGZ4bVhLcTN6UXFDc2R5RnNMSTNhUElCcEMyUUI4bTEzVG1JWGx4c3JHWjRUVnpnREg3UUNpUVJuT0NYR0g?oc=5",
-      "source": "The Hill",
-      "sourceUrl": "https://thehill.com",
-      "publishedAt": "2026-08-06T07:00:00.000Z",
+      "title": "Buzz of the Week: Should Utah block Kalshi entirely?",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOUTNOLTBEdncySXd2NE1qMG5yMEZ4QVBTMjZ5NHFoQWVZX25IbHBVOEpZUGV6QVRTQ0RDMUZaN3QyVDJOTlUxT3dqTjFBekRVdnNoTVduT0FTaGJQWjQ3SVVfSXgwRi1vSnRtX2hPdFVLMW15TWtNWkY5WjRfZ0dFNFBzNVBVYTJKWlE?oc=5",
+      "source": "The Salt Lake Tribune",
+      "sourceUrl": "https://www.sltrib.com",
+      "publishedAt": "2026-08-11T16:46:48.000Z",
       "states": [
         {
           "name": "Utah",

@@ -1,32 +1,32 @@
 {
-  "generatedAt": "2026-08-17",
+  "generatedAt": "2026-08-18",
   "source": "Google News",
   "query": "Kalshi (state OR lawsuit OR court OR regulator) when:90d",
   "queryUrl": "https://news.google.com/search?q=Kalshi+%28state+OR+lawsuit+OR+court+OR+regulator%29+when%3A90d&hl=en-US&gl=US&ceid=US%3Aen",
   "items": [
     {
-      "title": "Prediction market operator Kalshi hits back at Nevada regulator over geofencing fine",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOT0pOU3U5SkkwQ3dlQmEwdk1qc3cySXdxYnoxd1FLek9iTEI2LXBBT195Ni1vRXhyZDljbExOekR1bGNWd2NEQmFEVVIwdVE1Zlh4enVIT3oxVlo2OHBqdGgtVm1FQWFIWkVNSTh1d2J3VFpiTWp1Ymo0ZUt1eXA4TWdmY2gwdDNKVWEtMlM4ZjNRZUoxQ0NUT2FiTEV6LVRzcHBWNE5MTExGdWN2N3doODNNQkVHOExFTnBrclM4ejJSS1B0ZElPUg?oc=5",
-      "source": "Reuters",
-      "sourceUrl": "https://www.reuters.com",
-      "publishedAt": "2026-08-15T14:59:45.000Z",
-      "states": [
-        {
-          "name": "Nevada",
-          "abbr": "NV"
-        }
-      ]
-    },
-    {
-      "title": "EXCHANGES AND MARKET REGULATION—Wash. Super.: Kalshi ordered to stop offering most prediction market trading in Washington state",
-      "url": "https://news.google.com/rss/articles/CBMingJBVV95cUxNMzh4TU5tU2ZMc2dIejVpSVZ3LUZWRU9WV2F3V3FmOHdHODhuZHJua0x1blFiTm9xcFdtX19RaXRBWTlqYUMwbjZtbFRiQUdER2ZUYmFZN2tNUnRzTXpRZnhwSlE0NFZ6UDJyZjE2TnpjcEdDSjJ4VENWTG9TemhIQmxFY1duVmI3SmZBNzBac3Z0cGVkWXdXNDYycVJqeFl3TjZvckZvOXJFVzZyWEp2Q1oxTVdnOThIZkRMRU1RV0tjMzJRcGV6eklubUhEZXNPMi01TzVYZTRmWllrOElBdnlrOW01NzVMaFB6eGNQQk9HeTllc0l6eVBJT1pCdTVWc1RJQ3JqdlBSTFNPZ1ZKUUVfaGhvN3VLOFAydktB?oc=5",
-      "source": "VitalLaw.com",
-      "sourceUrl": "https://www.vitallaw.com",
-      "publishedAt": "2026-08-14T22:19:39.000Z",
+      "title": "Judge orders Kalshi to stop offering wagers in State of Washington",
+      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQTVYwY2lVbEI2LW42UWZ3Y0lrQnRaYUc0WF80cV9uVnQ1c3NKYi1hTGFXTzUxUVZQWVkycWhBRm5BRkZBbEd5UlFLSWFudXZkdlBwMHhNZU9acUZVWDlHelQ2M093aGJDVS1fUnZyX29XeDFOSi1zYU9McVFfN3BMQVdObnMxWnVsSlRjVzUtZTBqR0Q3bU5QbDI0SVFiRnd0T0NTQlRmZ1ZyVzFBQy1LQWlIXzdvQXVtTEdZdXpvN1luTnBOTnpCdHVRakVOSkRrV0RHRWplVmJaWmNBMmdUaWZ5XzNrOXRVeEotRg?oc=5",
+      "source": "AppleValleyNewsNow.com",
+      "sourceUrl": "https://www.applevalleynewsnow.com",
+      "publishedAt": "2026-08-18T02:10:40.000Z",
       "states": [
         {
           "name": "Washington",
           "abbr": "WA"
+        }
+      ]
+    },
+    {
+      "title": "Prediction market operator Kalshi hits back at Nevada regulator over geofencing fine",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOT0pOU3U5SkkwQ3dlQmEwdk1qc3cySXdxYnoxd1FLek9iTEI2LXBBT195Ni1vRXhyZDljbExOekR1bGNWd2NEQmFEVVIwdVE1Zlh4enVIT3oxVlo2OHBqdGgtVm1FQWFIWkVNSTh1d2J3VFpiTWp1Ymo0ZUt1eXA4TWdmY2gwdDNKVWEtMlM4ZjNRZUoxQ0NUT2FiTEV6LVRzcHBWNE5MTExGdWN2N3doODNNQkVHOExFTnBrclM4ejJSS1B0ZElPUg?oc=5",
+      "source": "Reuters",
+      "sourceUrl": "https://www.reuters.com",
+      "publishedAt": "2026-08-15T14:59:00.000Z",
+      "states": [
+        {
+          "name": "Nevada",
+          "abbr": "NV"
         }
       ]
     },

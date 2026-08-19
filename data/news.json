@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-08-18",
+  "generatedAt": "2026-08-19",
   "source": "Google News",
   "query": "Kalshi (state OR lawsuit OR court OR regulator) when:90d",
   "queryUrl": "https://news.google.com/search?q=Kalshi+%28state+OR+lawsuit+OR+court+OR+regulator%29+when%3A90d&hl=en-US&gl=US&ceid=US%3Aen",
   "items": [
     {
-      "title": "Judge orders Kalshi to stop offering wagers in State of Washington",
-      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQTVYwY2lVbEI2LW42UWZ3Y0lrQnRaYUc0WF80cV9uVnQ1c3NKYi1hTGFXTzUxUVZQWVkycWhBRm5BRkZBbEd5UlFLSWFudXZkdlBwMHhNZU9acUZVWDlHelQ2M093aGJDVS1fUnZyX29XeDFOSi1zYU9McVFfN3BMQVdObnMxWnVsSlRjVzUtZTBqR0Q3bU5QbDI0SVFiRnd0T0NTQlRmZ1ZyVzFBQy1LQWlIXzdvQXVtTEdZdXpvN1luTnBOTnpCdHVRakVOSkRrV0RHRWplVmJaWmNBMmdUaWZ5XzNrOXRVeEotRg?oc=5",
-      "source": "AppleValleyNewsNow.com",
-      "sourceUrl": "https://www.applevalleynewsnow.com",
-      "publishedAt": "2026-08-18T02:10:40.000Z",
+      "title": "Kalshi asks appeals court to block CT gambling enforcement",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPT1I2RjFROXA1WEdSS0pYZFFjZFdUaU5NZW5EZGNiVHMzdTIxYVNNUG4xbWhPanVYWFBVaXBzdUNveGtEYWNwd3hLMzJSMW9xc0J4SFJWYk5VT19nXzZhMnpvT0tLU1NuTWNJTEdOUjFXOTlXeHFlTXZWdzJwM3VUXzBxVllEX2dUQjZ1T2Z2ZXJLVU1WazhHcExpaHg?oc=5",
+      "source": "Hartford Business Journal",
+      "sourceUrl": "https://hartfordbusiness.com",
+      "publishedAt": "2026-08-18T20:28:12.000Z",
       "states": [
         {
-          "name": "Washington",
-          "abbr": "WA"
+          "name": "Connecticut",
+          "abbr": "CT"
         }
       ]
     },
@@ -22,7 +22,7 @@
       "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOT0pOU3U5SkkwQ3dlQmEwdk1qc3cySXdxYnoxd1FLek9iTEI2LXBBT195Ni1vRXhyZDljbExOekR1bGNWd2NEQmFEVVIwdVE1Zlh4enVIT3oxVlo2OHBqdGgtVm1FQWFIWkVNSTh1d2J3VFpiTWp1Ymo0ZUt1eXA4TWdmY2gwdDNKVWEtMlM4ZjNRZUoxQ0NUT2FiTEV6LVRzcHBWNE5MTExGdWN2N3doODNNQkVHOExFTnBrclM4ejJSS1B0ZElPUg?oc=5",
       "source": "Reuters",
       "sourceUrl": "https://www.reuters.com",
-      "publishedAt": "2026-08-15T14:59:00.000Z",
+      "publishedAt": "2026-08-17T15:05:08.000Z",
       "states": [
         {
           "name": "Nevada",
@@ -31,15 +31,15 @@
       ]
     },
     {
-      "title": "Federal judge: Connecticut can impose sports betting rules on Kalshi",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPZTZ6bldaRzdtQjFJaTFVNkNoY25ob2dFOTBjLWtCSlR2bTEzano0MS1uTHZYT1hXWkpFbFBYa28xVkNrNlpfaWNmNWZzTjlibTE1SkJuUTlfSWZHZFFOTVQ0clViUjF3T3E2TGU4VGd2S0tycF9NajM1NzVPRy1DeHp0Ym00U3RhcWdUQWEybTlqdm5vX3RXYUk5OThkUlN3YmlEdENXMWdRdFpPTzFJSUJMeHh1ZUFDcFHSAcIBQVVfeXFMT05seWJjSjFzOFBCVk81M3Q0dy00alNIU09Pcjh5SGwydVpwWFY0RE01RFc5TUhhZjZ5T1l6U0drR3JSQmphaEVoWU5Yckxrb01DZ1M1Y2RQR1pVWnhEZGxJWi1KLXpINmI1M1NxWlFiMmVCS082VjVnekVWd3Y2UHdObjRUYWFhc0Nsc2RyUUxZeThQRHJkYUV2Wl96Q1ZhYTYwV1lUdjV4TEdvMWQxRE1mWnFzVGVaNzYwSVV5dGx0a0E?oc=5",
-      "source": "NBC Connecticut",
-      "sourceUrl": "https://www.nbcconnecticut.com",
-      "publishedAt": "2026-08-13T22:16:57.000Z",
+      "title": "King County judge orders Kalshi to stop most online betting in Washington state",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOV0ItNUxuaXZaYmxaUEp5QmRQUFlTSklOZnEyMVJhUDBzQ2JFRGU4ekd0bWxNZURTZHJtR256bEFpV2lCVERGb1BQSUktcXVMRDU2czJhTTYwbV9qb0o3QmE3NXNrYzNtOVpYZmlja3Mxd2FkRUtxekwwM2lsbWkwUWFQRHpVQ3dzemowVGZ0UlBmTlF1WDdkN25DSUtZMG5nM18wV1JNUTFGdVVpcGZwQXpOdGJXUQ?oc=5",
+      "source": "KUOW",
+      "sourceUrl": "https://www.kuow.org",
+      "publishedAt": "2026-08-14T21:15:00.000Z",
       "states": [
         {
-          "name": "Connecticut",
-          "abbr": "CT"
+          "name": "Washington",
+          "abbr": "WA"
         }
       ]
     },
@@ -57,11 +57,11 @@
       ]
     },
     {
-      "title": "Buzz of the Week: Should Utah block Kalshi entirely?",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOUTNOLTBEdncySXd2NE1qMG5yMEZ4QVBTMjZ5NHFoQWVZX25IbHBVOEpZUGV6QVRTQ0RDMUZaN3QyVDJOTlUxT3dqTjFBekRVdnNoTVduT0FTaGJQWjQ3SVVfSXgwRi1vSnRtX2hPdFVLMW15TWtNWkY5WjRfZ0dFNFBzNVBVYTJKWlE?oc=5",
+      "title": "Kalshi loses in court to Utah. Can Utahns still bet on prediction markets?",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE12T29RaENKd0JrZ1haZ2hHRUJvX0s1TEl1c1hxN2ROdGN5c3FoNzExTTUwVzY5U1lMTzBqaFNBVXYtM25lQWNzbTdTbldYTXVwRG50VzUtYjNhUHRHRkVlaTRlMHlLMnFsRVhmWmJNZm4xdUppTTBibml3?oc=5",
       "source": "The Salt Lake Tribune",
       "sourceUrl": "https://www.sltrib.com",
-      "publishedAt": "2026-08-11T16:46:48.000Z",
+      "publishedAt": "2026-08-05T07:00:00.000Z",
       "states": [
         {
           "name": "Utah",

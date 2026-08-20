@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-19",
+  "generatedAt": "2026-08-20",
   "source": "Google News",
   "query": "Kalshi (state OR lawsuit OR court OR regulator) when:90d",
   "queryUrl": "https://news.google.com/search?q=Kalshi+%28state+OR+lawsuit+OR+court+OR+regulator%29+when%3A90d&hl=en-US&gl=US&ceid=US%3Aen",
@@ -18,6 +18,19 @@
       ]
     },
     {
+      "title": "Judge orders Kalshi to stop offering wagers in State of Washington",
+      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQTVYwY2lVbEI2LW42UWZ3Y0lrQnRaYUc0WF80cV9uVnQ1c3NKYi1hTGFXTzUxUVZQWVkycWhBRm5BRkZBbEd5UlFLSWFudXZkdlBwMHhNZU9acUZVWDlHelQ2M093aGJDVS1fUnZyX29XeDFOSi1zYU9McVFfN3BMQVdObnMxWnVsSlRjVzUtZTBqR0Q3bU5QbDI0SVFiRnd0T0NTQlRmZ1ZyVzFBQy1LQWlIXzdvQXVtTEdZdXpvN1luTnBOTnpCdHVRakVOSkRrV0RHRWplVmJaWmNBMmdUaWZ5XzNrOXRVeEotRg?oc=5",
+      "source": "AppleValleyNewsNow.com",
+      "sourceUrl": "https://www.applevalleynewsnow.com",
+      "publishedAt": "2026-08-18T02:10:40.000Z",
+      "states": [
+        {
+          "name": "Washington",
+          "abbr": "WA"
+        }
+      ]
+    },
+    {
       "title": "Prediction market operator Kalshi hits back at Nevada regulator over geofencing fine",
       "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOT0pOU3U5SkkwQ3dlQmEwdk1qc3cySXdxYnoxd1FLek9iTEI2LXBBT195Ni1vRXhyZDljbExOekR1bGNWd2NEQmFEVVIwdVE1Zlh4enVIT3oxVlo2OHBqdGgtVm1FQWFIWkVNSTh1d2J3VFpiTWp1Ymo0ZUt1eXA4TWdmY2gwdDNKVWEtMlM4ZjNRZUoxQ0NUT2FiTEV6LVRzcHBWNE5MTExGdWN2N3doODNNQkVHOExFTnBrclM4ejJSS1B0ZElPUg?oc=5",
       "source": "Reuters",
@@ -27,19 +40,6 @@
         {
           "name": "Nevada",
           "abbr": "NV"
-        }
-      ]
-    },
-    {
-      "title": "King County judge orders Kalshi to stop most online betting in Washington state",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOV0ItNUxuaXZaYmxaUEp5QmRQUFlTSklOZnEyMVJhUDBzQ2JFRGU4ekd0bWxNZURTZHJtR256bEFpV2lCVERGb1BQSUktcXVMRDU2czJhTTYwbV9qb0o3QmE3NXNrYzNtOVpYZmlja3Mxd2FkRUtxekwwM2lsbWkwUWFQRHpVQ3dzemowVGZ0UlBmTlF1WDdkN25DSUtZMG5nM18wV1JNUTFGdVVpcGZwQXpOdGJXUQ?oc=5",
-      "source": "KUOW",
-      "sourceUrl": "https://www.kuow.org",
-      "publishedAt": "2026-08-14T21:15:00.000Z",
-      "states": [
-        {
-          "name": "Washington",
-          "abbr": "WA"
         }
       ]
     },

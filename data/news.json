@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20",
+  "generatedAt": "2026-08-21",
   "source": "Google News",
   "query": "Kalshi (state OR lawsuit OR court OR regulator) when:90d",
   "queryUrl": "https://news.google.com/search?q=Kalshi+%28state+OR+lawsuit+OR+court+OR+regulator%29+when%3A90d&hl=en-US&gl=US&ceid=US%3Aen",
@@ -22,7 +22,7 @@
       "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQTVYwY2lVbEI2LW42UWZ3Y0lrQnRaYUc0WF80cV9uVnQ1c3NKYi1hTGFXTzUxUVZQWVkycWhBRm5BRkZBbEd5UlFLSWFudXZkdlBwMHhNZU9acUZVWDlHelQ2M093aGJDVS1fUnZyX29XeDFOSi1zYU9McVFfN3BMQVdObnMxWnVsSlRjVzUtZTBqR0Q3bU5QbDI0SVFiRnd0T0NTQlRmZ1ZyVzFBQy1LQWlIXzdvQXVtTEdZdXpvN1luTnBOTnpCdHVRakVOSkRrV0RHRWplVmJaWmNBMmdUaWZ5XzNrOXRVeEotRg?oc=5",
       "source": "AppleValleyNewsNow.com",
       "sourceUrl": "https://www.applevalleynewsnow.com",
-      "publishedAt": "2026-08-18T02:10:40.000Z",
+      "publishedAt": "2026-08-18T00:40:04.000Z",
       "states": [
         {
           "name": "Washington",
@@ -48,7 +48,7 @@
       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPSW1reHpsa1pJbmFCZHo1LUpWWE9vRmlTdFNfVUkwT3JmcTVyQWRzZW85bnhVUXFHQzZ4NzJaVXp0dV9WZnFkVnljazh4VVhQQVNTUmlVLTUyRWtWQ0ROUlVZVUtseHhxaktxQXhubUxoMTZaVW9oUkZ3YnZEbWExblQtb2wyZWF4RTItdE9JeFh6RGVfbk8zcmhvTjVSYW5nMjF6ZnZuQ3Rsd0VfVEE?oc=5",
       "source": "PYMNTS.com",
       "sourceUrl": "https://www.pymnts.com",
-      "publishedAt": "2026-08-12T17:46:17.000Z",
+      "publishedAt": "2026-08-12T07:00:00.000Z",
       "states": [
         {
           "name": "New York",
@@ -70,15 +70,15 @@
       ]
     },
     {
-      "title": "Trump regulator orders Kalshi to defy Michigan court – escalating battle over prediction markets",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQVkFqeW16eUZfYTF0ZmVlSndieVRSNUYyN1hIdV9xcTJjTDFGZTJGNEF4MDh4V3pZZFRfT3IwV2J5V0pmajFvaGdWZnJQdWVWbTFzbGs4RDh4bW92SnJWQVZVMVJBTVpWWFE1d080OC05TUVEdmtXTnZrZk5ndzM0X1EyaFlXTkE?oc=5",
-      "source": "CNN",
-      "sourceUrl": "https://www.cnn.com",
-      "publishedAt": "2026-07-17T07:00:00.000Z",
+      "title": "Minnesota Judge Blocks First State Ban on Prediction Markets Like Kalshi and Polymarket",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQZXFhbWhPbkNEOEtXbnpXbW5DQ3lQaXY1MW5McXNEV1VmUDBaWEJKLWZZYUt1Uk1TREpHeTIyR2E0WlJNeEcyc1d2Nk9yWlZpTkp3blJ4a1dySmVwTnhqblRCaExqb2hBTVc5ZHk1WEEwZDZuSG83RG43Mm5SdkVNTkJJZzBrNm8?oc=5",
+      "source": "The New York Times",
+      "sourceUrl": "https://www.nytimes.com",
+      "publishedAt": "2026-07-27T07:00:00.000Z",
       "states": [
         {
-          "name": "Michigan",
-          "abbr": "MI"
+          "name": "Minnesota",
+          "abbr": "MN"
         }
       ]
     }

@@ -1,9 +1,22 @@
 {
-  "generatedAt": "2026-08-21",
+  "generatedAt": "2026-08-22",
   "source": "Google News",
   "query": "Kalshi (state OR lawsuit OR court OR regulator) when:90d",
   "queryUrl": "https://news.google.com/search?q=Kalshi+%28state+OR+lawsuit+OR+court+OR+regulator%29+when%3A90d&hl=en-US&gl=US&ceid=US%3Aen",
   "items": [
+    {
+      "title": "Kalshi asks King County judge to reconsider Washington injunction on event contracts",
+      "url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxNMTFLbEljRmtsWFFMYXgtUXk0Qmk2eFhJTmZJLXJ1TlhPQkdSNzhOYVFTUVdYc0RfcTlDVDFRNzRiUkM0SUhOZFFGb1Bpdm5CN1c3SXZRdGRhcDZudS1La0Vqc0J5ZksyNWdMMElER1pPZ2xibHc5VEJoOG1TdTVOeGpOYkhtUGNXZU1oQURkSnFELUhNekIzaUIyamdoWFp1cjg4ZnhzQnFqcXdBUlFjeEtTSG1COG5EanhvMXQzUUJ5N1dYcTgyNVl3QmhCSkdjcHZxSmREZVdSVE9RZnZhbnFHVWJaem5tLUpVODRVbkpsOE42TGVrUjBoLWJtMUNYTTBIc1dmU0Y4eTA?oc=5",
+      "source": "KOMO",
+      "sourceUrl": "https://komonews.com",
+      "publishedAt": "2026-08-22T02:18:22.000Z",
+      "states": [
+        {
+          "name": "Washington",
+          "abbr": "WA"
+        }
+      ]
+    },
     {
       "title": "Kalshi asks appeals court to block CT gambling enforcement",
       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPT1I2RjFROXA1WEdSS0pYZFFjZFdUaU5NZW5EZGNiVHMzdTIxYVNNUG4xbWhPanVYWFBVaXBzdUNveGtEYWNwd3hLMzJSMW9xc0J4SFJWYk5VT19nXzZhMnpvT0tLU1NuTWNJTEdOUjFXOTlXeHFlTXZWdzJwM3VUXzBxVllEX2dUQjZ1T2Z2ZXJLVU1WazhHcExpaHg?oc=5",
@@ -14,19 +27,6 @@
         {
           "name": "Connecticut",
           "abbr": "CT"
-        }
-      ]
-    },
-    {
-      "title": "Judge orders Kalshi to stop offering wagers in State of Washington",
-      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQTVYwY2lVbEI2LW42UWZ3Y0lrQnRaYUc0WF80cV9uVnQ1c3NKYi1hTGFXTzUxUVZQWVkycWhBRm5BRkZBbEd5UlFLSWFudXZkdlBwMHhNZU9acUZVWDlHelQ2M093aGJDVS1fUnZyX29XeDFOSi1zYU9McVFfN3BMQVdObnMxWnVsSlRjVzUtZTBqR0Q3bU5QbDI0SVFiRnd0T0NTQlRmZ1ZyVzFBQy1LQWlIXzdvQXVtTEdZdXpvN1luTnBOTnpCdHVRakVOSkRrV0RHRWplVmJaWmNBMmdUaWZ5XzNrOXRVeEotRg?oc=5",
-      "source": "AppleValleyNewsNow.com",
-      "sourceUrl": "https://www.applevalleynewsnow.com",
-      "publishedAt": "2026-08-18T00:40:04.000Z",
-      "states": [
-        {
-          "name": "Washington",
-          "abbr": "WA"
         }
       ]
     },
@@ -44,11 +44,11 @@
       ]
     },
     {
-      "title": "CFTC Issues Emergency Order to Kalshi to Keep Operating Despite NY Lawsuit",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPSW1reHpsa1pJbmFCZHo1LUpWWE9vRmlTdFNfVUkwT3JmcTVyQWRzZW85bnhVUXFHQzZ4NzJaVXp0dV9WZnFkVnljazh4VVhQQVNTUmlVLTUyRWtWQ0ROUlVZVUtseHhxaktxQXhubUxoMTZaVW9oUkZ3YnZEbWExblQtb2wyZWF4RTItdE9JeFh6RGVfbk8zcmhvTjVSYW5nMjF6ZnZuQ3Rsd0VfVEE?oc=5",
-      "source": "PYMNTS.com",
-      "sourceUrl": "https://www.pymnts.com",
-      "publishedAt": "2026-08-12T07:00:00.000Z",
+      "title": "CFTC orders Kalshi to continue offering prediction markets in New York after state lawsuit",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQOFYxUmp4WjRsQnVEanE5UnhlNTdKZTdJenZiSFBfZTVpMnNKRGVTcTlaWEtEZG9BTXFhVXp5amNta3JkdkZsU05sLVJKcmdXVEZVNjhHTXRrdzVITHVvSXcybXFWTnNTVFpMYjM1YWdHSkRNN1plLXpuSDBYLV93cHVGam4tOUdvaWlCWTJTSkVKN2hGMGdOd3B2WDN4bU1jenhYYkpXWjVyc1oyUG1QTXI1bXVuYUlyZzIxR200eFZyTFFwdnJlQmUxUGwzZw?oc=5",
+      "source": "CoinDesk",
+      "sourceUrl": "https://www.coindesk.com",
+      "publishedAt": "2026-08-11T07:00:00.000Z",
       "states": [
         {
           "name": "New York",
@@ -70,15 +70,15 @@
       ]
     },
     {
-      "title": "Minnesota Judge Blocks First State Ban on Prediction Markets Like Kalshi and Polymarket",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQZXFhbWhPbkNEOEtXbnpXbW5DQ3lQaXY1MW5McXNEV1VmUDBaWEJKLWZZYUt1Uk1TREpHeTIyR2E0WlJNeEcyc1d2Nk9yWlZpTkp3blJ4a1dySmVwTnhqblRCaExqb2hBTVc5ZHk1WEEwZDZuSG83RG43Mm5SdkVNTkJJZzBrNm8?oc=5",
-      "source": "The New York Times",
-      "sourceUrl": "https://www.nytimes.com",
-      "publishedAt": "2026-07-27T07:00:00.000Z",
+      "title": "Ruling lets Wisconsin pursue action against Kalshi, CDNA and similar event-contract sites",
+      "url": "https://news.google.com/rss/articles/CBMipAJBVV95cUxOckQ3OWlnUGM3dnlXVy1TdTVzcTVqeERuemExWUpCYzFDWEJ1UVIzZVhFZ0NISUR2TTNFY2JnZnNBNkhGbWFtcGtXbFFLVG5aZW5VRmFtTHg2ODh0UEtaVXBsSHN4ZlQ2dWNRYzJicHA4UjJqUXczT21Mcnp6OHlQRl9tYkR0OUNUN1V0eGFueDVUZXVreGRtTTJiR2hzdEdJdVh4dGVSRGxnQ0U1UnY4Tm4xcmNtbGh1UVQ1bFlUSzB1dDF0LWFYdHNTMDdwZ3B0Q2c5MEJFMTk5c2xyNmtKcEZ4eDlSQjNhd0xYSHp3MEg1LU9lYTRuV2FualV3UkxDNVAtVUp0UnNnZlJ4cjRiMG8zbFRhek9FQmJ1S1JCeURhQnly?oc=5",
+      "source": "WLUK",
+      "sourceUrl": "https://fox11online.com",
+      "publishedAt": "2026-07-31T07:00:00.000Z",
       "states": [
         {
-          "name": "Minnesota",
-          "abbr": "MN"
+          "name": "Wisconsin",
+          "abbr": "WI"
         }
       ]
     }
